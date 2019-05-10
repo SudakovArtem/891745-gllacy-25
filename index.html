@@ -5,8 +5,126 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logotype.svg" width="156" height="67" alt="Gllacy Shop">
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Доставка и оплата</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">О компании</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__search" href="search.html">Поиск</a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__login" href="login.html">Вход</a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__cart" href="cart.html">Пусто</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <main class="page-main">
+      
+      <h1 class="visually-hidden">Магазин Глэйси</h1>
 
+      <section class="promo">
+        <!-- Здесь будет слайдер -->
+      </section>
+
+      <section class="benefit">
+        <!-- Здесь будут акции -->
+      </section>
+
+      <section class="popular">
+        <!-- Здесь будет популярные товары -->
+      </section>
+      
+      <section class="advantages">
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <h3 class="advantages__title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--icecream">
+            <p class="advantages__description">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+            </p>
+          </li>
+          <li class="advantages__item advantages__item--quality">
+            <p class="advantages__description">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. 
+            </p>
+          </li>
+          <li class="advantages__item advantages__item--ingredients">
+            <p class="advantages__description">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+            </p>
+          </li>
+          <li class="advantages__item advantages__item--delivery">
+            <p class="advantages__description">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+            </p>
+          </li>
+        </ul>
+      </section>
+      
+      <section class="new">
+        <article class="new__item new-blog">
+          <p>Новое в нашем блоге</p>
+          <a href="#" class="new-blog__item">10 способов сервировки фруктовых щербетов к столу</a>
+        </article>
+        <div class="new__item subscribe">
+          <p class="subscribe__description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+          <input type="email" class="subscribe__form">
+          <button class="subscribe__btn">Отправить</button>
+        </div>
+      </section>
+      <section class="promo">
+          <!-- Здесь будет карта -->
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__info info">
+          <ul class="info__list">
+            <li class="info__item">
+              <a class="info__link info__link--liked" href="#">Для поставщиков</a>
+            </li>
+            <li class="info__item">
+              <a class="info__link" href="#">О производстве</a>
+            </li>
+            <li class="info__item">
+              <a class="info__link" href="#">Наши документы</a>
+            </li>
+            <li class="info__item">
+              <a class="info__link" href="#">Экологические стандарты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <p class="copyright__text">Сделано в <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a> © 2019</p>
+        </div>
+      </footer>
   </body>
 </html>
