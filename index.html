@@ -40,15 +40,68 @@
       <h1 class="visually-hidden">Магазин Глэйси</h1>
 
       <section class="promo">
-        <!-- Здесь будет слайдер -->
+        <p class="promo__schedule">С 10 до 20, ежедневно</p>
+        <p class="promo__tel">8 812 450-25-25</p>
+        <p class="promo__title promo__title--one">Крем-брюле и пломбир с малиновым джемом</p>
+        <p class="promo__title promo__title--two visually-hidden">Шоколадный пломбир и лимонный сорбет</p>
+        <p class="promo__title promo__title--three visually-hidden">Пломбир с помадкой и клубничный щербет</p>
+        <fieldset class="promo__item">
+          <label class="promo__label">
+              <input class="promo__radio" id="slide-one" name="slide" type="radio" checked>
+              1
+          </label>
+          <label class="promo__label">
+              <input class="promo__radio" id="slide-two" name="slide" type="radio">
+              2
+          </label>
+          <label class="promo__label">
+              <input class="promo__radio" id="slide-three" name="slide" type="radio">
+              3
+          </label>
+        </fieldset>
+        <a href="#" class="promo__btn button">Давайте оба!</a>
       </section>
 
       <section class="benefit">
-        <!-- Здесь будут акции -->
+        <div class="benefit__first benefit__first--raspberries">
+          <strong class="benefit__title">Малинка даром!</strong>
+          <p class="benefit__description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <a href="#" class="benefit__btn button">Хочу варенье!</a>
+        </div>
+        <div class="benefit__second benefit__second--chocolate">
+          <strong class="benefit__title">Шоколадки даром!</strong>
+          <p class="benefit__description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <a href="#" class="benefit__btn button">Хочу шоколадки!</a>
+        </div>
       </section>
 
       <section class="popular">
-        <!-- Здесь будет популярные товары -->
+        <ul class="popular__list">
+          <li class="popular__item icecream">
+              <img src="img/orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="icecream__image">
+              <b class="icecream__price">310Р</b>
+              <span class="icecream__units">/кг</span>
+              <a class="icecream__description" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          </li>
+          <li class="popular__item icecream">
+              <img src="img/coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" class="icecream__image">
+              <b class="icecream__price">380Р</b>
+              <span class="icecream__units">/кг</span>
+              <a class="icecream__description" href="#">Сливочно-кофейное с кусочками шоколада</a>
+          </li>
+          <li class="popular__item icecream">
+              <img src="img/strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="icecream__image">
+              <b class="icecream__price">355Р</b>
+              <span class="icecream__units">/кг</span>
+              <a class="icecream__description" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          </li>
+          <li class="popular__item icecream">
+              <img src="img/creme-brulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой" class="icecream__image">
+              <b class="icecream__price">415Р</b>
+              <span class="icecream__units">/кг</span>
+              <a class="icecream__description" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+          </li>
+        </ul>
       </section>
       
       <section class="advantages">
@@ -81,13 +134,21 @@
         <div class="subscribe">
           <p class="subscribe__description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
           <form class="subscribe__form">
-            <input type="email" class="subscribe__email">
-            <button type="submit" class="subscribe__btn">Отправить</button>
+            <input type="email" name="email" class="subscribe__email">
+            <button type="submit" class="subscribe__btn button">Отправить</button>
           </form>
         </div>
       </div>
-      <section class="promo">
-          <!-- Здесь будет карта -->
+      <section class="map">
+        <img src="img/map.jpg" class="map__image" alt="Адресс: ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
+        <div class="map__adress adress">
+          <p class="adress__description">Адрес главного офиса и офлайн-магазина:</p>
+          <p class="adress__description adress__description--bold">л. Большая Конюшенная 19/8, Санкт-Петербург</p>
+          <p class="adress__description">Для заказов по телефону:</p>
+          <p class="adress__description adress__description--bold">8 812 450-25-25</p>
+          <p class="adress__description">(с 10 до 20 ежедневно)</p>
+          <button type="button" class="adress__btn button">Форма обратной связи</button>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -123,5 +184,47 @@
         <p class="copyright__text">Сделано в <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a> © 2019</p>
       </div>
     </footer>
+    <section class="feedback-popup visually-hidden">
+      <form action="https://echo.htmlacademy.ru" method="post" class="feedback-popup__form">
+          <input class="feedback-popup__item" type="text" name="name" value="Как вас зовут?">
+          <input class="feedback-popup__item" type="email" name="email" value="Ваша почта для ответа?">
+          <textarea class="feedback-popup__comment" name="comment" rows="7">Напишите что-нибудь...</textarea>
+          <button type="submit" class="feedback-popup__btn button">Отправить</button>
+      </form>
+    </section>
+    <section class="login-popup visually-hidden">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <input class="login-popup__item" type="email" name="email" value="Электронная почта">
+        <input class="login-popup__item" type="password" name="password" value="Пароль">
+        <textarea class="login-popup__comment" name="comment" rows="7">Напишите что-нибудь...</textarea>
+        <button type="submit" class="login-popup__btn button">Войти</button>
+        <a class="login-popup__link" href="#">Забыли пароль?</a>
+        <a class="login-popup__link" href="#">Новая регистрация</a>
+      </form>
+    </section>
+    <section class="search-popup visually-hidden">
+      <form class="search-popup__form">
+        <input class="search-popup__item" type="search" name="search" placeholder="Что ищем?"> 
+      </form>
+    </section>
+    <section class="menu-popup visually-hidden">
+      <ul class="menu-popup__list">
+        <li class="menu-popup__item">
+          <a class="menu-popup__link menu-popup__link--bold" href="#">Новинки</a>
+        </li>
+        <li class="menu-popup__item">
+          <a class="menu-popup__link" href="#">Сливочное</a>
+        </li>
+        <li class="menu-popup__item">
+          <a class="menu-popup__link" href="#">Щербеты</a>
+        </li>
+        <li class="menu-popup__item">
+          <a class="menu-popup__link" href="#">Фруктовый лед</a>
+        </li>
+        <li class="menu-popup__item">
+          <a class="menu-popup__link" href="#">Мелорин</a>
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
