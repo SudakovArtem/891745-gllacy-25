@@ -98,7 +98,7 @@
                         джемы
                     </label>
                 </fieldset>
-                <input class="filter__button" type="button" value="Применить">
+                <button class="filter__button" type="submit">Применить</button>
             </form>
             <section class="catalog">
                 <ul class="catalog__list">
@@ -177,6 +177,7 @@
                 </ul>
             </section>
             <section class="pagination">
+                <button class="pagination__button-back pagination__button-back--disabled" type="button">&lt;</button>
                 <ul class="pagination__list">
                     <li class="pagination__item pagination__item--current">
                         <a class="pagination__link">1</a>
@@ -191,6 +192,7 @@
                         <a href="#" class="pagination__link">4</a>
                     </li>
                 </ul>
+                <button class="pagination__button-forward" type="button">&gt;</button>
             </section>
         </main>
 
@@ -229,6 +231,7 @@
         </footer>
 
         <section class="cart-popup">
+        <form class="cart-popup__form" action="https://echo.htmlacademy.ru" method="post" >
             <table class="cart-popup__products products-table">
                 <tr class="products-table__row">
                     <td class="products-table__del"><span>X</span></td>
@@ -245,8 +248,11 @@
                     <td class="products-table__cost">450 руб.</td>
                 </tr>
             </table>
+            <input class="products-table__hidden" name="hidden" type="hidden" value="Пломбир с апельсиновым джемом 1,5 кг х 200 руб.">
+            <input class="products-table__hidden" name="hidden" type="hidden" value="Клубничный пломбир с присыпкой из белого шоколада 1,5 кг х 300 руб.">
             <p class="cart-popup__total">Итого: 750 руб.</p> 
-            <a href="#" class="cart-popup__btn button">Оформить заказ</a>
+            <button class="cart-popup__btn button" type="submit">Оформить заказ</button>
+        </form>
         </section>
     </body>
 </html>
