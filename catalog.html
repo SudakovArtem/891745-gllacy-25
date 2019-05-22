@@ -51,18 +51,18 @@
                     </div>
                 </li>
                 <li class="user-list__item user-list__item">
-                  <a class="user-list__link user-list__link--login" href="login.html">Вход</a>
-                  <div class="login-popup">
-                    <form action="https://echo.htmlacademy.ru" method="post">
+                    <a class="user-list__link user-list__link--login" href="login.html">Вход</a>
+                    <div class="login-popup">
+                      <form action="https://echo.htmlacademy.ru" method="post" class="login-popup__form">
                         <input class="login-popup__item" type="email" name="email" placeholder="Электронная почта">
                         <input class="login-popup__item" type="password" name="password" placeholder="Пароль">
                         <button type="submit" class="login-popup__btn button">Войти</button>
                         <div class="login-popup__column">
-                        <a class="login-popup__link" href="#">Забыли пароль?</a>
-                        <a class="login-popup__link" href="#">Новая регистрация</a>
+                          <a class="login-popup__link" href="#">Забыли пароль?</a>
+                          <a class="login-popup__link" href="#">Новая регистрация</a>
                         </div>
-                    </form>
-                  </div>
+                      </form>
+                    </div>
                 </li>
                 <li class="user-list__item">
                     <a class="user-list__link user-list__link--not-empty" href="cart.html">2 товара</a>
@@ -93,6 +93,10 @@
                 </li>
               </ul>
             </nav>
+            <div class="header__timetable timetable">
+                <p class="timetable__schedule">С 10 до 20, ежедневно</p>
+                <p class="timetable__tel">8 812 450-25-25</p>
+            </div>
           </header>
 
           <main class="main container">
@@ -120,45 +124,61 @@
                         <option class="sorting__value" value="fat-content">по жирности</option>
                     </select>
                 </fieldset>
+                <fieldset class="filter__item range">
+                    <legend class="filter__legend">Цена: 100 руб. – 500 руб.</legend>
+                        <div class="range__scale"></div>
+                        <div class="range__bar"></div>
+                        <div class="range__toggle range__toggle--min"></div>
+                        <div class="range__toggle range__toggle--max"></div>
+                </fieldset>
                 <fieldset class="filter__item">
                     <legend class="filter__legend">Жирность:</legend>
                     <label class="filter__label">
-                        <input class="filter__radio" name="fat" type="radio">
+                        <input class="filter__radio visually-hidden" name="fat" type="radio">
+                        <span class="filter__radio-indicator"></span>
                         0%
                     </label>
                     <label class="filter__label">
-                        <input class="filter__radio" name="fat" type="radio" checked>
+                        <input class="filter__radio visually-hidden" name="fat" type="radio" checked>
+                        <span class="filter__radio-indicator"></span>
                         до 10%
                     </label>
                     <label class="filter__label">
-                        <input class="filter__radio" name="fat" type="radio">
+                        <input class="filter__radio visually-hidden" name="fat" type="radio">
+                        <span class="filter__radio-indicator"></span>
                         до 30%
                     </label>
                     <label class="filter__label">
-                        <input class="filter__radio" name="fat" type="radio">
+                        <input class="filter__radio visually-hidden" name="fat" type="radio">
+                        <span class="filter__radio-indicator"></span>
                         выше 30%
                     </label>
                 </fieldset>
-                <fieldset class="filter__item">
+                <fieldset class="filter__item filter__item--fillers">
                     <legend class="filter__legend">Наполнители:</legend>
                     <label class="filter__label">
-                        <input class="filter__checkbox" name="options" type="checkbox" checked>
+                        <input class="filter__checkbox visually-hidden" name="options" type="checkbox" checked>
+                        <span class="filter__checkbox-indicator"></span>
                         шоколадные
                     </label>
                     <label class="filter__label">
-                        <input class="filter__checkbox" name="options" type="checkbox" checked>
+                        <input class="filter__checkbox visually-hidden" name="options" type="checkbox" checked>
+                        <span class="filter__checkbox-indicator"></span>
                         сахарные присыпки
                     </label>
                     <label class="filter__label">
-                        <input class="filter__checkbox" name="options" type="checkbox">
+                        <input class="filter__checkbox visually-hidden" name="options" type="checkbox">
+                        <span class="filter__checkbox-indicator"></span>
                         фрукты
                     </label>
                     <label class="filter__label">
-                        <input class="filter__checkbox" name="options" type="checkbox">
+                        <input class="filter__checkbox visually-hidden" name="options" type="checkbox">
+                        <span class="filter__checkbox-indicator"></span>
                         сиропы
                     </label>
                     <label class="filter__label">
-                        <input class="filter__checkbox" name="options" type="checkbox">
+                        <input class="filter__checkbox visually-hidden" name="options" type="checkbox">
+                        <span class="filter__checkbox-indicator"></span>
                         джемы
                     </label>
                 </fieldset>
@@ -170,7 +190,7 @@
                     <li class="catalog__item icecream">
                         <img src="img/orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="icecream__image">
                         <p class="icecream__cost cost">
-                            <b class="cost__price">310Р</b>
+                            <b class="cost__price">310₽</b>
                             <span class="cost__units">/кг</span>
                         </p>
                         <a class="icecream__description" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -179,7 +199,7 @@
                     <li class="catalog__item icecream">
                         <img src="img/coffee.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада" class="icecream__image">
                         <p class="icecream__cost cost">
-                            <b class="cost__price">380Р</b>
+                            <b class="cost__price">380₽</b>
                             <span class="cost__units">/кг</span>
                         </p>
                         <a class="icecream__description" href="#">Сливочно-кофейное с кусочками шоколада</a>
@@ -188,7 +208,7 @@
                     <li class="catalog__item icecream">
                         <img src="img/strawberry.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="icecream__image">
                         <p class="icecream__cost cost">
-                            <b class="cost__price">355Р</b>
+                            <b class="cost__price">355₽</b>
                             <span class="cost__units">/кг</span>
                         </p>
                         <a class="icecream__description" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
@@ -197,7 +217,7 @@
                     <li class="catalog__item icecream">
                         <img src="img/creme-brulee.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой" class="icecream__image">
                         <p class="icecream__cost cost">
-                            <b class="cost__price">415Р</b>
+                            <b class="cost__price">415₽</b>
                             <span class="cost__units">/кг</span>
                         </p>
                         <a class="icecream__description" href="#">Сливочное крем-брюле с карамельной подливкой</a>
@@ -206,7 +226,7 @@
                     <li class="catalog__item icecream">
                         <img src="img/lingonberry.jpg" width="267" height="267" alt="Сливочное с брусничным джемом" class="icecream__image">
                         <p class="icecream__cost cost">
-                            <b class="cost__price">325</b>
+                            <b class="cost__price">325₽</b>
                             <span class="cost__units">/кг</span>
                         </p>
                         <a class="icecream__description" href="#">Сливочное с брусничным джемом</a>
@@ -215,7 +235,7 @@
                     <li class="catalog__item icecream">
                         <img src="img/blueberry.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники" class="icecream__image">
                         <p class="icecream__cost cost">
-                            <b class="cost__price">410Р</b>
+                            <b class="cost__price">410₽</b>
                             <span class="cost">/кг</span>
                         </p>
                         <a class="icecream__description" href="#">Сливочно-черничное с цельными ягодами черники </a>
@@ -224,7 +244,7 @@
                     <li class="catalog__item icecream">
                         <img src="img/lemon.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой" class="icecream__image">
                         <p class="icecream__cost cost">
-                            <b class="cost__price">375Р</b>
+                            <b class="cost__price">375₽</b>
                             <span class="cost__units">/кг</span>
                         </p>
                         <a class="icecream__description" href="#">Сливочно-лимонное с карамельной присыпкой</a>
@@ -233,7 +253,7 @@
                     <li class="catalog__item icecream">
                         <img src="img/chocolate.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой" class="icecream__image">
                         <p class="icecream__cost cost">
-                            <b class="cost__price">320Р</b>
+                            <b class="cost__price">320₽</b>
                             <span class="cost__units">/кг</span>
                         </p>
                         <a class="icecream__description" href="#">Сливочное с шоколадной стружкой</a>
@@ -242,7 +262,7 @@
                     <li class="catalog__item icecream">
                         <img src="img/vanilla.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада" class="icecream__image">
                         <p class="icecream__cost cost">
-                            <b class="cost__price">440Р</b>
+                            <b class="cost__price">440₽</b>
                             <span class="cost__units">/кг</span>
                         </p>
                         <a class="icecream__description" href="#">Сливочно-ванильное с кусочками шоколада</a>
@@ -251,7 +271,7 @@
                     <li class="catalog__item icecream">
                         <img src="img/menthol.jpg" width="267" height="267" alt="Сливочноe с ментоловым сиропом" class="icecream__image">
                         <p class="icecream__cost cost">
-                            <b class="cost__price">435Р</b>
+                            <b class="cost__price">435₽</b>
                             <span class="cost__units">/кг</span>
                         </p>
                         <a class="icecream__description" href="#">Сливочноe с ментоловым сиропом</a>
@@ -260,7 +280,7 @@
                     <li class="catalog__item icecream">
                         <img src="img/dark-chocolate.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада" class="icecream__image">
                         <p class="icecream__cost cost">
-                            <b class="cost__price">355Р</b>
+                            <b class="cost__price">355₽</b>
                             <span class="cost__units">/кг</span>
                         </p>
                         <a class="icecream__description" href="#">Сливочное с кусочками черного шоколада</a>
@@ -269,7 +289,7 @@
                     <li class="catalog__item icecream">
                         <img src="img/mint.jpg" width="267" height="267" alt="Сливочное с мятным сиропом" class="icecream__image">
                         <p class="icecream__cost cost">
-                            <b class="cost__price">420Р</b>
+                            <b class="cost__price">420₽</b>
                             <span class="cost__units">/кг</span>
                         </p>
                         <a class="icecream__description" href="#">Сливочное с мятным сиропом</a>
