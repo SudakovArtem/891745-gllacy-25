@@ -73,6 +73,7 @@ a {
     border-radius: 30px;
     text-decoration: none;
     font: inherit;
+    font-weight: bold;
     color: #ffffff;
     border: none;
 }
@@ -118,6 +119,7 @@ a {
     width: 143px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
     background-color: #f8f7f4;
+    z-index: 2;
 }
 
 .navigation-list__item:hover .menu-popup {
@@ -203,6 +205,7 @@ a {
     padding: 8px 17px 8px 45px;
     border-radius: 30px;
     margin-left: 10px;
+    font-weight: 500;
 }
 
 .user-list__link::after {
@@ -460,8 +463,9 @@ a {
 .promo__title {
     display: block;
     font-size: 60px;
-    padding: 0 240px;
+    padding: 0 220px;
     text-align: center;
+    font-weight: bold;
 }
 
 .promo__label {
@@ -541,7 +545,13 @@ a {
 
 .benefit__btn {
     align-self: flex-end;
+    text-shadow: none;
+    box-shadow: 0px 2px 2px 0 rgba(85, 8, 0, 0.54);
 }
+
+.benefit__btn:hover {
+    text-shadow: none;
+    box-shadow: 0px 1px 2px 0 #ac1000;}
 
 .benefit__item--raspberries {
     background-image: url(../img/raspberry-background.jpg);
@@ -582,6 +592,7 @@ a {
 
 .popular__item:hover, .catalog__item:hover {
     background-color: rgba(248, 247, 244, 0.2);
+    box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .popular__item:hover > .icecream__btn, .catalog__item:hover > .icecream__btn {
@@ -596,6 +607,7 @@ a {
     position: absolute;
     left: 0;
     bottom: 140px;
+    padding-left: 13px;
     font-weight: bold;
 }
 
@@ -629,26 +641,26 @@ a {
 
 .advantages {
     width:1146px;
-    background-image: url(../img/waffle-background.jpg);
+    background-image: url(../img/waffle-pattern.jpg);
+    background-repeat: repeat;
     color: #323232;
     border-radius: 15px;
     box-sizing: border-box;
     margin-top: 40px;
-    padding: 0;
+    padding: 20px;
 }
 
 .advantages__title {
     font-size: 24px;
     line-height: 30px;
     margin: 0;
-    padding: 0 20px;
-    padding-top: 20px;
 }
 
 .advantages__list {
     width: 560px;
-    padding-left: 77px;
+    padding-left: 57px;
     padding-right: 15px;
+    margin: 0;
     list-style: none;
     justify-content: space-between;
 }
@@ -1227,7 +1239,6 @@ a {
 }
 
 .pagination__link[href]:hover {
-    color: #323232;
     background-color: rgba(248, 247, 244, 0.2);
     border-radius: 50%;
 }
@@ -1248,4 +1259,16 @@ a {
 
 .pagination__button-back--disabled {
     color: rgba(248, 247, 244, 0.2);
+}
+
+.search-popup__item, .login-popup__item, .feedback-popup__item, .feedback-popup__comment {
+    font-size: 16px;
+    font-weight: bold;
+    color: #323232;
+}
+
+.search-popup__item::placeholder, .login-popup__item::placeholder, .feedback-popup__item::placeholder, .feedback-popup__comment::placeholder {
+    font-size: 16px;
+    font-weight: normal;
+    color: #999999;
 }
