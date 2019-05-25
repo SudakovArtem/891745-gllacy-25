@@ -20,7 +20,7 @@
                             <a class="menu-popup__link menu-popup__link--bold" href="#">Новинки</a>
                             </li>
                             <li class="menu-popup__item">
-                            <a class="menu-popup__link" href="#">Сливочное</a>
+                            <a class="menu-popup__link menu-popup__link--active" href="#">Сливочное</a>
                             </li>
                             <li class="menu-popup__item">
                             <a class="menu-popup__link" href="#">Щербеты</a>
@@ -73,14 +73,14 @@
                                     <td class="products-table__del"><span>X</span></td>
                                     <td class="products-table__image"><img src="img/orange-min.png" width="33" height="33" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
                                     <td class="products-table__name">Пломбир с апельсиновым джемом</td> 
-                                    <td class="products-table__price">1,5 кг х 200 руб.</td> 
+                                    <td class="products-table__price">1,5 кг х <span class="products-table__price-per-kilo">200 руб.</span></td> 
                                     <td class="products-table__cost">300 руб.</td>
                                 </tr>
                                 <tr class="products-table__row">
                                     <td class="products-table__del"><span>X</span></td>
                                     <td class="products-table__image"><img src="img/strawberry-min.png" width="33" height="33" alt="Сливочно-клубничное с присыпкой из белого шоколада"></td>
                                     <td class="products-table__name">Клубничный пломбир с присыпкой из белого шоколада</td> 
-                                    <td class="products-table__price">1,5 кг х 300 руб.</td> 
+                                    <td class="products-table__price">1,5 кг х <span class="products-table__price-per-kilo">300 руб.</span></td> 
                                     <td class="products-table__cost">450 руб.</td>
                                 </tr>
                             </table>
@@ -298,7 +298,6 @@
                 </ul>
             </section>
             <section class="pagination">
-                <button class="pagination__button-back pagination__button-back--disabled" type="button">&lt;</button>
                 <ul class="pagination__list">
                     <li class="pagination__item pagination__item--current">
                         <a class="pagination__link">1</a>
@@ -313,7 +312,6 @@
                         <a href="#" class="pagination__link">4</a>
                     </li>
                 </ul>
-                <button class="pagination__button-forward" type="button">&gt;</button>
             </section>
         </main>
 

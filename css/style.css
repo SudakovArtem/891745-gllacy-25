@@ -1,20 +1,20 @@
 @font-face {
     font-family: Roboto; 
-    src: url(fonts/roboto.woff2);
+    src: url(../fonts/roboto.woff2);
     font-weight: normal;
     font-style: normal;
 } 
 
 @font-face {
     font-family: Roboto; 
-    src: url(fonts/robotobold.woff2);
+    src: url(../fonts/robotobold.woff2);
     font-weight: bold;
     font-style: normal;
 } 
 
 @font-face {
     font-family: Roboto; 
-    src: url(fonts/robotomedium.woff2);
+    src: url(../fonts/robotomedium.woff2);
     font-weight: 500;
     font-style: normal;
 }
@@ -80,7 +80,7 @@ a {
 
 .button:hover {
     background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+    box-shadow: 0px 2px 2px 0 #ac1000;
 }
 
 .button:active {
@@ -119,6 +119,7 @@ a {
     width: 143px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
     background-color: #f8f7f4;
+    border-radius: 5px;
     z-index: 2;
 }
 
@@ -156,6 +157,11 @@ a {
 
 .menu-popup__link:active {
     background-color: #f6b5a5;
+}
+
+.menu-popup__link--active, .menu-popup__link--active:hover {
+    background-color: #d07058;
+    color: #f8f7f4;
 }
 
 .menu-popup__link--bold {
@@ -258,6 +264,7 @@ a {
     border-radius: 10px;
     padding: 15px;
     background-color: #f8f7f4;
+    box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .user-list__item:hover .search-popup {
@@ -315,6 +322,8 @@ a {
     border-radius: 10px;
     padding: 13px;
     background-color: #f8f7f4;
+    box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+    z-index: 2;
 }
 
 .user-list__item:hover .cart-popup {
@@ -325,7 +334,7 @@ a {
     color: #323232;
     font-size: 13px;
     padding-left: 10px;
-    border-bottom: 1px solid #999999;
+    border-bottom: 1px solid #cacac7;
 }
 
 .cart-popup__products td {
@@ -334,6 +343,10 @@ a {
 
 .products-table__name {
     width: 220px;
+}
+
+.products-table__price-per-kilo {
+    color: #999999;
 }
 
 .cart-popup__total {
@@ -375,6 +388,7 @@ a {
     border-radius: 10px;
     padding: 19px;
     background-color: #f8f7f4;
+    box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .user-list__item:hover .login-popup {
@@ -1221,10 +1235,25 @@ a {
 
 .pagination__list {
     display: flex;
+    position: relative;
     list-style: none;
     padding: 0;
     align-items: center;
     justify-content: space-between;
+}
+
+.pagination__list::before {
+    content: "<";
+    padding: 0 10px;
+    color: rgba(248, 247, 244, 0.2);
+    cursor: pointer;
+}
+
+.pagination__list::after {
+    content: ">";
+    padding: 0 10px;
+    color: #f8f7f4;
+    cursor: pointer;
 }
 
 .pagination__item {
