@@ -789,6 +789,10 @@ a {
     margin-top: 40px;
 }
 
+.map__iframe {
+    border: none;
+}
+
 .map__address {
     position: absolute;
     top: 60px;
@@ -933,7 +937,8 @@ a {
     top: 50%;
     left: 50%;
     width: 428px;
-    transform: translate(-50%, -50%);
+    margin-left: -239px;
+    margin-top: -246px;
     min-height: 443px;
     border-radius: 10px;
     padding: 25px;
@@ -1300,4 +1305,37 @@ a {
     font-size: 16px;
     font-weight: normal;
     color: #999999;
+}
+
+.slide-two {
+    background-color: #8996a6;
+    background-image: url(../img/icecream-background-2.png);
+}
+
+.slide-three {
+    background-color: #9d8b84;
+    background-image: url(../img/icecream-background-3.png);
+}
+
+@keyframes bounce {
+    0% { transform: translateY(-2000px); }
+    70% { transform: translateY(30px); }
+    90% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.feedback-animation {
+    animation-name: bounce;
+    animation-duration: 0.6s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.feedback-error {
+    animation-name: shake;
+    animation-duration: 0.6s;
 }

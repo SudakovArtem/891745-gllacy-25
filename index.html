@@ -85,15 +85,15 @@
         <p class="promo__title promo__title--three visually-hidden">Пломбир с помадкой и клубничный щербет</p>
         <fieldset class="promo__item">
           <label class="promo__label">
-              <input class="promo__radio visually-hidden" id="slide-one" name="slide" type="radio" checked>
+              <input class="promo__radio promo__radio--one visually-hidden" name="slide" type="radio" checked>
               <span class="promo__radio-indicator"></span>
           </label>
           <label class="promo__label">
-              <input class="promo__radio visually-hidden" id="slide-two" name="slide" type="radio">
+              <input class="promo__radio promo__radio--two visually-hidden" name="slide" type="radio">
               <span class="promo__radio-indicator"></span>
           </label>
           <label class="promo__label">
-              <input class="promo__radio visually-hidden" id="slide-three" name="slide" type="radio">
+              <input class="promo__radio promo__radio--three visually-hidden" name="slide" type="radio">
               <span class="promo__radio-indicator"></span>
           </label>
         </fieldset>
@@ -194,7 +194,8 @@
           </div>
       </div>
       <section class="map map-container">
-        <img src="img/map.png" class="map__image" alt="Адресс: ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
+        <iframe src="https://yandex.ru/map-widget/v1/-/CCrJR0-D" class="map__iframe" width="1200" height="430"></iframe>
+        <img src="img/map.png" class="map__image visually-hidden" alt="Адресс: ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
         <div class="map__address address">
           <p class="address__description">Адрес главного офиса <br>и офлайн-магазина:</p>
           <p class="address__description-bold address__description-bold--one">л. Большая Конюшенная 19/8, Санкт-Петербург</p>
@@ -254,5 +255,7 @@
       </form>
     </section>
     <div class="feedback-overlay visually-hidden"></div>
+    <script src="js/slider.js"></script>
+    <script src="js/feedback.js"></script>
   </body>
 </html>
