@@ -127,7 +127,7 @@ a {
     display: block;
 }
 
-.navigation-list__link--catalog::before {
+.navigation-list__link--menu::before {
     content: "";
     position: absolute;
     top: 35px;
@@ -153,6 +153,7 @@ a {
 
 .menu-popup__link:hover {
     background-color: #fbded7;
+    border-radius: 5px;
 }
 
 .menu-popup__link:active {
