@@ -47,15 +47,19 @@ a {
     color: #ffffff;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
@@ -66,6 +70,7 @@ a {
 
 .button {
     display: inline-block;
+    vertical-align: top;
     padding: 13px 19px;
     text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
     box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
@@ -604,6 +609,15 @@ a {
     padding: 5px 9px 20px 9px;
     border-radius: 5px;
 }
+.popular__item::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 9px;
+    width: 61px;
+    height: 61px;
+    background: url(../img/hit.svg) no-repeat;
+}
 
 .popular__item:hover, .catalog__item:hover {
     background-color: rgba(248, 247, 244, 0.2);
@@ -612,6 +626,7 @@ a {
 
 .popular__item:hover > .icecream__btn, .catalog__item:hover > .icecream__btn {
     display: inline-block;
+    vertical-align: top;
 }
 
 .icecream__image {
@@ -754,13 +769,18 @@ a {
 }
 
 .subscribe {
+    background-image: url(../img/mail-background.svg)
+}
+
+.subscribe .wrap {
     background-color: #f8f7f4;
     width: 520px;
     min-height: 180px;
     color: #323232;
     border-radius: 15px;
     margin: 0;
-    padding: 20px
+    padding: 15px;
+    margin: 5px;
 }
 
 .subscribe__description {
