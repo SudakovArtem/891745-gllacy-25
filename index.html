@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -14,7 +15,6 @@
         <ul class="main-nav__item navigation-list">
           <li class="navigation-list__item">
             <a href="catalog.html" class="navigation-list__link navigation-list__link--menu">Каталог</a>
-            <div class="menu-popup">
               <ul class="menu-popup__list">
                 <li class="menu-popup__item">
                   <a class="menu-popup__link menu-popup__link--bold" href="#">Новинки</a>
@@ -32,7 +32,6 @@
                   <a class="menu-popup__link" href="#">Мелорин</a>
                 </li>
               </ul>
-            </div>
           </li>
           <li class="navigation-list__item">
             <a href="#" class="navigation-list__link">Доставка и оплата</a>
@@ -44,11 +43,9 @@
         <ul class="main-nav__item user-list">
           <li class="user-list__item">
             <a class="user-list__link user-list__link--search" href="search.html"><span class="visually-hidden">Поиск</span></a>
-            <div class="search-popup">
               <form class="search-popup__form">
                 <input class="search-popup__item" type="search" name="search" placeholder="Что ищем?"> 
               </form>
-            </div>
           </li>
           <li class="user-list__item user-list__item">
             <a class="user-list__link user-list__link--login" href="login.html">Вход</a>
@@ -83,7 +80,7 @@
         <p class="promo__title promo__title--one">Крем-брюле и пломбир с малиновым джемом</p>
         <p class="promo__title promo__title--two visually-hidden">Шоколадный пломбир и лимонный сорбет</p>
         <p class="promo__title promo__title--three visually-hidden">Пломбир с помадкой и клубничный щербет</p>
-        <fieldset class="promo__item">
+        <div class="promo__item">
           <label class="promo__label">
               <input class="promo__radio promo__radio--one visually-hidden" name="slide" type="radio" checked>
               <span class="promo__radio-indicator"></span>
@@ -96,7 +93,7 @@
               <input class="promo__radio promo__radio--three visually-hidden" name="slide" type="radio">
               <span class="promo__radio-indicator"></span>
           </label>
-        </fieldset>
+        </div>
         <a href="#" class="promo__btn button">Давайте оба!</a>
       </section>
 
@@ -156,20 +153,17 @@
       
       <section class="advantages container">
         <h2 class="advantages__title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
-        <div class="advantages__columns">
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--icecream">
               <p class="advantages__description">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
               </p>
             </li>
-            <li class="advantages__item advantages__item--quality">
-              <p class="advantages__description">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. 
-              </p>
-            </li>
-          </ul>
-          <ul class="advantages__list">
             <li class="advantages__item advantages__item--ingredients">
               <p class="advantages__description">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+              </p>
+            </li>
+            <li class="advantages__item advantages__item--quality">
+              <p class="advantages__description">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. 
               </p>
             </li>
             <li class="advantages__item advantages__item--delivery">
@@ -177,7 +171,6 @@
               </p>
             </li>
           </ul>
-        </div>
       </section>
       
       <div class="news-blog-and-subscribe container">
@@ -199,12 +192,12 @@
         <iframe src="https://yandex.ru/map-widget/v1/-/CCrJR0-D" class="map__iframe" width="1200" height="430"></iframe>
         <img src="img/map.png" class="map__image visually-hidden" alt="Адресс: ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
         <div class="map__address address">
-          <p class="address__description">Адрес главного офиса <br>и офлайн-магазина:</p>
-          <p class="address__description-bold address__description-bold--one">л. Большая Конюшенная 19/8, Санкт-Петербург</p>
+          <p class="address__description">Адрес главного офиса и офлайн-магазина:</p>
+          <p class="address__description-bold address__description-bold--one">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
           <p class="address__description">Для заказов по телефону:</p>
           <p class="address__description-bold">8 812 450-25-25</p>
           <p class="address__description">(с 10 до 20 ежедневно)</p>
-          <a class="address__btn button" href="#">Форма обратной связи</a>
+          <a class="address__btn button" href="form.html">Форма обратной связи</a>
         </div>
       </section>
     </main>

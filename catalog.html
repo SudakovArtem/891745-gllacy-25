@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Каталог Gllacy</title>
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body class="inner-page">
@@ -66,30 +67,28 @@
                 </li>
                 <li class="user-list__item">
                     <a class="user-list__link user-list__link--not-empty" href="cart.html">2 товара</a>
-                    <div class="cart-popup">
-                        <form class="cart-popup__form" action="https://echo.htmlacademy.ru" method="post" >
-                            <table class="cart-popup__products products-table">
-                                <tr class="products-table__row">
-                                    <td class="products-table__del"><span>X</span></td>
-                                    <td class="products-table__image"><img src="img/orange-min.png" width="33" height="33" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
-                                    <td class="products-table__name">Пломбир с апельсиновым джемом</td> 
-                                    <td class="products-table__price">1,5 кг х <span class="products-table__price-per-kilo">200 руб.</span></td> 
-                                    <td class="products-table__cost">300 руб.</td>
-                                </tr>
-                                <tr class="products-table__row">
-                                    <td class="products-table__del"><span>X</span></td>
-                                    <td class="products-table__image"><img src="img/strawberry-min.png" width="33" height="33" alt="Сливочно-клубничное с присыпкой из белого шоколада"></td>
-                                    <td class="products-table__name">Клубничный пломбир с присыпкой из белого шоколада</td> 
-                                    <td class="products-table__price">1,5 кг х <span class="products-table__price-per-kilo">300 руб.</span></td> 
-                                    <td class="products-table__cost">450 руб.</td>
-                                </tr>
-                            </table>
-                            <input class="products-table__hidden" name="hidden" type="hidden" value="Пломбир с апельсиновым джемом 1,5 кг х 200 руб.">
-                            <input class="products-table__hidden" name="hidden" type="hidden" value="Клубничный пломбир с присыпкой из белого шоколада 1,5 кг х 300 руб.">
-                            <p class="cart-popup__total">Итого: 750 руб.</p> 
-                            <button class="cart-popup__btn button" type="submit">Оформить заказ</button>
-                        </form>
-                        </div>
+                    <form class="cart-popup__form" action="https://echo.htmlacademy.ru" method="post" >
+                        <table class="cart-popup__products products-table">
+                            <tr class="products-table__row">
+                                <td class="products-table__del"><button type="button" class="products-table__btn"></button></td>
+                                <td class="products-table__image"><img src="img/orange-min.png" width="33" height="33" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
+                                <td class="products-table__name">Пломбир с апельсиновым джемом</td> 
+                                <td class="products-table__price">1,5 кг х <span class="products-table__price-per-kilo">200 руб.</span></td> 
+                                <td class="products-table__cost">300 руб.</td>
+                            </tr>
+                            <tr class="products-table__row">
+                                <td class="products-table__del"><button type="button" class="products-table__btn"></button></td>
+                                <td class="products-table__image"><img src="img/strawberry-min.png" width="33" height="33" alt="Сливочно-клубничное с присыпкой из белого шоколада"></td>
+                                <td class="products-table__name">Клубничный пломбир с присыпкой из белого шоколада</td> 
+                                <td class="products-table__price">1,5 кг х <span class="products-table__price-per-kilo">300 руб.</span></td> 
+                                <td class="products-table__cost">450 руб.</td>
+                            </tr>
+                        </table>
+                        <input class="products-table__hidden" name="hidden" type="hidden" value="Пломбир с апельсиновым джемом 1,5 кг х 200 руб.">
+                        <input class="products-table__hidden" name="hidden" type="hidden" value="Клубничный пломбир с присыпкой из белого шоколада 1,5 кг х 300 руб.">
+                        <p class="cart-popup__total">Итого: 750 руб.</p> 
+                        <button class="cart-popup__btn button" type="submit">Оформить заказ</button>
+                    </form>
                 </li>
               </ul>
             </nav>
@@ -123,6 +122,9 @@
                         <option class="sorting__value" value="first-dear">сначала дорогие</option>
                         <option class="sorting__value" value="fat-content">по жирности</option>
                     </select>
+                    <svg class="icon-down" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                        <path fill="#ffffff" d="M5.5 10L0 0h11"></path>
+                    </svg>
                 </fieldset>
                 <fieldset class="filter__item range">
                     <legend class="filter__legend">Цена: 100 руб. – 500 руб.</legend>
@@ -131,7 +133,7 @@
                         <div class="range__toggle range__toggle--min"></div>
                         <div class="range__toggle range__toggle--max"></div>
                 </fieldset>
-                <fieldset class="filter__item">
+                <fieldset class="filter__item fat">
                     <legend class="filter__legend">Жирность:</legend>
                     <label class="filter__label">
                         <input class="filter__radio visually-hidden" name="fat" type="radio">
@@ -184,7 +186,7 @@
                 </fieldset>
                 <button class="filter__button" type="submit">Применить</button>
             </form>
-            <!-- переделать -->
+
             <section class="catalog">
                 <ul class="catalog__list">
                     <li class="catalog__item icecream">
@@ -299,6 +301,9 @@
             </section>
             <section class="pagination">
                 <ul class="pagination__list">
+                    <li>
+                        <a href="#" class="pagipagination__button pagipagination__button--forward pagipagination__button--disabled"><img src="img/pagination-button.svg" class="pagipagination__back"></a>
+                    </li>
                     <li class="pagination__item pagination__item--current">
                         <a class="pagination__link">1</a>
                     </li>
@@ -310,6 +315,12 @@
                     </li>
                     <li class="pagination__item">
                         <a href="#" class="pagination__link">4</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="#" class="pagination__link">5</a>
+                    </li>
+                    <li>
+                        <a href="#" class="pagipagination__button pagipagination__button--back"><img src="img/pagination-button.svg" class="pagipagination__forward" width="8" height="12"></a>
                     </li>
                 </ul>
             </section>
