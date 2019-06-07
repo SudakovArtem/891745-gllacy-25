@@ -155,7 +155,7 @@ input[type="radio"].visually-hidden {
 .navigation-list__link--menu::before {
     content: "";
     position: absolute;
-    top: 35px;
+    top: 45px;
     left: 0;
     width: 100px;
     height: 10px;
@@ -279,7 +279,7 @@ input[type="radio"].visually-hidden {
 .user-list__link::after {
     content: "";
     position: absolute;
-    top: 35px;
+    top: 30px;
     left: 0;
     width: 100px;
     height: 10px;
@@ -414,12 +414,14 @@ input[type="radio"].visually-hidden {
 }
 
 .cart-popup__products .products-table__del {
+    position: relative;
     padding: 0;
-    width: 0;
 }
 
 .cart-popup__products .products-table__image {
-    padding-top: 0;
+    padding: 5px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 
 .cart-popup__products .products-table__name {
@@ -435,31 +437,31 @@ input[type="radio"].visually-hidden {
 .products-table__btn {
     border: none;
     background: none;
-    width: 0;
+    width: 15px;
+    height: 15px;
     padding: 0;
+    position: absolute;
+    top: 12px;
+    left: -21px;
 }
 
-.products-table__del {
-    position: relative;
-}
-
-.products-table__del::before, .products-table__del::after {
+.products-table__btn::before, .products-table__btn::after {
     content: "";
     position: absolute;
-    top: 20px;
-    left: -20px;
+    top: 7px;
+    left: 0;
     width: 15px;
     height: 1px;
     background-color: #323232;
 }
 
-.products-table__del::before {
+.products-table__btn::before {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
 }
 
-.products-table__del::after {
+.products-table__btn::after {
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
@@ -753,7 +755,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog {
-    margin-top: 95px;
+    margin-top: 90px;
 }
 
 .popular__list, .catalog__list {
@@ -1332,7 +1334,7 @@ input[type="radio"].visually-hidden {
 .main__title {
     font-size: 35px;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     margin-top: 0;
 }
 
